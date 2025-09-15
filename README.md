@@ -3,12 +3,12 @@
 ## Descripción
 Aplicación web completa desarrollada con arquitectura de microservicios utilizando Docker. El sistema permite el registro y gestión de usuarios mediante tres contenedores interconectados.
 
-## 🏗Arquitectura
+## Arquitectura
 Usuario → Frontend (Nginx:8080) → Backend (Flask:5000) → Database (MySQL:3307)
 
 
 
-## 🛠Tecnologías
+## Tecnologías
 - **Frontend:** HTML5, CSS3, JavaScript, Nginx
 - **Backend:** Python 3.9, Flask, MySQL Connector
 - **Database:** MySQL 8.0
