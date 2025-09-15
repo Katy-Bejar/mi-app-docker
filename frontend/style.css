@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.form-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 12px 25px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+.users-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+}
+
+.users-list {
+    display: grid;
+    gap: 15px;
+}
+
+.user-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.user-email {
+    color: #666;
+    margin: 5px 0;
+}
+
+.user-date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+#loading {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
+
+.status {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.status.connected {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.error {
+    background: #f8d7da;
+    color: #721c24;
+}

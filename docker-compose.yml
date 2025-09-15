@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  database:
+    build: ./database
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mi_app_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: database
+      DB_NAME: mi_app_db
+      DB_USER: root
+      DB_PASSWORD: rootpassword
+      DB_PORT: 3306
+    depends_on:
+      - database
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
+    driver: bridge

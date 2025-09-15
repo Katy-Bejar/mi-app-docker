@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App con Docker y MySQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Usuarios con Docker</h1>
+        
+        <div class="form-section">
+            <h2>Agregar Nuevo Usuario</h2>
+            <form id="userForm">
+                <input type="text" id="name" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <button type="submit">Agregar Usuario</button>
+            </form>
+        </div>
+
+        <div class="users-section">
+            <h2>Usuarios Registrados</h2>
+            <div id="loading">Cargando usuarios...</div>
+            <div id="users" class="users-list"></div>
+        </div>
+
+        <div class="status">
+            <span id="status">Conectando...</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
